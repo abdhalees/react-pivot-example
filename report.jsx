@@ -31,19 +31,19 @@ var calculations = [
   {
     title: 'Load Rate',
     value: function(memo) {
-      return (memo.loads / memo.impressions * 100).toFixed(1);
+      return memo.loads / memo.impressions * 100;
     },
     template: function(value) {
-      return value + '%';
+      return value.toFixed(1) + '%';
     }
   },
   {
     title: 'Display Rate',
     value: function(memo) {
-      return (memo.displays / memo.loads * 100).toFixed(1);
+      return memo.displays / memo.loads * 100;
     },
     template: function(value) {
-      return value + '%';
+      return value.toFixed(1) + '%';
     }
   }
 ];
